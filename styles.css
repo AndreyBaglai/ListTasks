@@ -7,7 +7,7 @@ body {
    
 .container {
   margin: 0 auto;
-  padding-top: 50px; 
+  padding-top: 80px; 
 }
   
 .important {
@@ -47,7 +47,15 @@ button {
   margin-top: 10px;
   width: 400px;
   padding: 10px;
-  cursor: pointer; 
+  cursor: pointer;
+  letter-spacing: 2px;
+  font-weight: bold;
+  color: #1BA39C;
+  background-color: rgb(253, 216, 153); 
+}
+
+button:hover {
+  opacity: .9;
 }
   
 .todo {
