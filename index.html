@@ -9,22 +9,19 @@
     <title>ToDoListTasks</title>
 </head>
 <body>
-<div class="container">
+    <div class="container">
+        <div class="todo-task-form">
+            <h1>ToDo list - Tasks</h1>
+            <div class="create-new-todo-task">
+                <input type="text" class="message-task" placeholder="Description">
+                <button class="add">Add</button>
+            </div>
 
-   <div class="todo_list">
-        <h1>ToDo list - Tasks</h1>
-       <div class="create_new_todo">
-           <input type="text" class="message" placeholder="Описание">
-           <button class="add">Добавить</button>
-       </div>
-
-       <div class="wrapper">
-           <ul class="todo"></ul>
-       </div>
-
-   </div>
-
-</div>
-
+            <div class="wrapper-todo-tasks">
+                <ul id="todoListTasks"></ul>
+            </div>
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
 </body>
 </html>
