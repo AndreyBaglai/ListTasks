@@ -58,16 +58,16 @@ button:hover {
   opacity: .9;
 }
   
-.todo {
+#todoListTasks {
   padding-left: 0; 
 }
 
-.todo li {
+#todoListTasks li {
   padding: 1em;
   list-style-type: none; 
 }
 
-.todo li:not(:last-child) {
+#todoListTasks li:not(:last-child) {
   border-bottom: 1px solid #000; 
 }
   
