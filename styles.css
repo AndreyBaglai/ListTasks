@@ -65,6 +65,7 @@ button:hover {
 #todoListTasks li {
   padding: 1em;
   list-style-type: none; 
+  position: relative;
 }
 
 #todoListTasks li:not(:last-child) {
@@ -109,5 +110,15 @@ input[type=checkbox]:checked + label:before {
   -ms-transform: rotate(45deg);
   border-radius: 0;
   margin: 0 15px 5px 5px; 
+}
+
+.delete {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  text-transform: uppercase;
+  position: absolute;
+  right: 0;
+  bottom: 12px;
 }
   

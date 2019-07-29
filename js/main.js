@@ -34,6 +34,7 @@ function displayTasks() {
             <li>
                 <input type="checkbox" id="item-${idx}" ${item.checked ? "checked" : ""} />
                 <label for="item-${idx}" class="${item.important ? 'important' : ''}">${item.textTask}</label>
+                <button class="delete" id="${idx}">X</button>
             </li>
         `;
     });
@@ -55,16 +56,21 @@ ulTasks.addEventListener('change', event => {
 
 ulTasks.addEventListener('contextmenu', event => {
     event.preventDefault();
-
-    listTasks.forEach((item, idx) => {
+    listTasks.forEach(item => {
         if(item.textTask === event.target.innerHTML) {
-            if(event.ctrlKey) {
-                listTasks.splice(idx, 1);
-            } else {
-                item.important = !item.important;
-            }
+            item.important = !item.important;
             displayTasks();
             localStorage.setItem('listTasks', JSON.stringify(listTasks));
         }
     });
 });
+
+ulTasks.addEventListener('click', event => {
+    if(event.target.classList.contains('delete')) {
+        listTasks.splice(event.target.id, 1);
+        displayTasks();
+        localStorage.setItem('listTasks', JSON.stringify(listTasks));
+    }   
+});
+
+
